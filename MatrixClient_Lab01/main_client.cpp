@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
 #include "matAdd.cpp"
+#include "matTrans.cpp"
+#include "matMul.cpp"
+
 using namespace std;
+
 int main(){
     vector<vector<int> > inputMat;
     vector<vector<int> > addMat;
@@ -49,6 +53,23 @@ int main(){
     cout << "Result of Subtraction: " << endl;
     for(int i = 0; i < 2; i++){
         vector<int> temp;
+        for(int j = 0; j < 2; j++){
+            cout << res[i][j];
+        }
+        cout << endl;
+    }
+    res = matT(inputMat);
+    cout << "Result of Transpose of Matrix 1: " << endl;
+    for(int i = 0; i < 2; i++){
+        vector<int> temp;
+        for(int j = 0; j < 2; j++){
+            cout << res[i][j];
+        }
+        cout << endl;
+    }
+        res = matVects(inputMat, addMat);
+    cout << "Result of Multiplication: " << endl;
+    for(int i = 0; i < 2; i++){
         for(int j = 0; j < 2; j++){
             cout << res[i][j];
         }
